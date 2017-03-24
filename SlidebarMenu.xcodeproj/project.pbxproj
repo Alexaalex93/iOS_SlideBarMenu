@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09F46A541E850CE5005D18D4 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F46A531E850CE5005D18D4 /* SWRevealViewController.m */; };
+		09F46A561E851B07005D18D4 /* SidebarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F46A551E851B07005D18D4 /* SidebarMenu.swift */; };
 		F448092B1DB9972F0083B681 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448092A1DB9972F0083B681 /* AppDelegate.swift */; };
 		F44809301DB9972F0083B681 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F448092E1DB9972F0083B681 /* Main.storyboard */; };
 		F44809321DB9972F0083B681 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44809311DB9972F0083B681 /* Assets.xcassets */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09F46A511E850CE5005D18D4 /* SlidebarMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlidebarMenu-Bridging-Header.h"; sourceTree = "<group>"; };
+		09F46A521E850CE5005D18D4 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		09F46A531E850CE5005D18D4 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		09F46A551E851B07005D18D4 /* SidebarMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidebarMenu.swift; sourceTree = "<group>"; };
 		F44809271DB9972F0083B681 /* SlidebarMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlidebarMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F448092A1DB9972F0083B681 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F448092F1DB9972F0083B681 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F46A501E850C8C005D18D4 /* SWRevealVC */ = {
+			isa = PBXGroup;
+			children = (
+				09F46A521E850CE5005D18D4 /* SWRevealViewController.h */,
+				09F46A531E850CE5005D18D4 /* SWRevealViewController.m */,
+				09F46A511E850CE5005D18D4 /* SlidebarMenu-Bridging-Header.h */,
+			);
+			name = SWRevealVC;
+			sourceTree = "<group>";
+		};
 		F448091E1DB9972F0083B681 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +82,7 @@
 		F44809291DB9972F0083B681 /* SlidebarMenu */ = {
 			isa = PBXGroup;
 			children = (
+				09F46A501E850C8C005D18D4 /* SWRevealVC */,
 				F448092A1DB9972F0083B681 /* AppDelegate.swift */,
 				F448092E1DB9972F0083B681 /* Main.storyboard */,
 				F44809311DB9972F0083B681 /* Assets.xcassets */,
@@ -74,6 +91,7 @@
 				F448093C1DB9EF100083B681 /* MenuController.swift */,
 				F44809411DBDA87D0083B681 /* NewsTableViewCell.swift */,
 				F44809431DBDA9360083B681 /* NewsTableViewController.swift */,
+				09F46A551E851B07005D18D4 /* SidebarMenu.swift */,
 				F44809451DBDAC730083B681 /* MapViewController.swift */,
 				F44809471DBDAC7D0083B681 /* PhotoViewController.swift */,
 			);
@@ -120,6 +138,7 @@
 				TargetAttributes = {
 					F44809261DB9972F0083B681 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -165,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F46A541E850CE5005D18D4 /* SWRevealViewController.m in Sources */,
 				F44809441DBDA9360083B681 /* NewsTableViewController.swift in Sources */,
 				F448093D1DB9EF100083B681 /* MenuController.swift in Sources */,
+				09F46A561E851B07005D18D4 /* SidebarMenu.swift in Sources */,
 				F448092B1DB9972F0083B681 /* AppDelegate.swift in Sources */,
 				F44809461DBDAC730083B681 /* MapViewController.swift in Sources */,
 				F44809421DBDA87D0083B681 /* NewsTableViewCell.swift in Sources */,
@@ -293,10 +314,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SlidebarMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.355berrystreet.SlidebarMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlidebarMenu/SlidebarMenu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -305,10 +329,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SlidebarMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.355berrystreet.SlidebarMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SlidebarMenu/SlidebarMenu-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -12,11 +12,15 @@ class NewsTableViewController: UITableViewController {
 
     @IBOutlet var menuButton:UIBarButtonItem!
     
+    @IBOutlet weak var menuLateralButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.estimatedRowHeight = 242.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+
+        addSideBarMenu(leftMenuButton: menuButton, rightBarMenuButton: menuLateralButton)
     }
 
     override func didReceiveMemoryWarning() {

@@ -15,6 +15,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addSideBarMenu(leftMenuButton: menuButton)
+
         // Do any additional setup after loading the view.
     }
 
